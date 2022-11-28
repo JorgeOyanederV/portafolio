@@ -11,7 +11,7 @@ import Projects from "../components/Projects";
 
 let darkTheme = createTheme({
   palette: {
-    type: "dark",
+    mode: "dark",
   },
 });
 darkTheme = responsiveFontSizes(darkTheme);
@@ -20,9 +20,9 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Header />
+      {/* <Header /> */}
       <HeroSection />
-      <Projects />
+      {/* <Projects /> */}
     </ThemeProvider>
   );
 };
