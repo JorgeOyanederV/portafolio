@@ -20,9 +20,9 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      {/* <Header /> */}
+      <Header />
       <HeroSection />
-      {/* <Projects /> */}
+      <Projects />
     </ThemeProvider>
   );
 };
