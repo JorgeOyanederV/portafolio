@@ -21,12 +21,7 @@ const projectsData = [
       "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=697&q=80",
     imageAlt: "Portafolio",
     tags: ["React.js", "Material-UI", "Gatsby.js"],
-    links: [
-      {
-        icon: GitHubIcon,
-        href: "https://www.github.com",
-      },
-    ],
+    links: [],
   },
   {
     title: "Panel de Administracion",
@@ -39,7 +34,7 @@ const projectsData = [
     links: [
       {
         icon: GitHubIcon,
-        href: "https://www.github.com",
+        href: "https://github.com/JorgeOyanederV/admin-dashboard",
       },
       {
         icon: OpenInNewIcon,
@@ -56,6 +51,10 @@ const projectsData = [
       "https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
     links: [
+      {
+        icon: GitHubIcon,
+        href: "https://github.com/JorgeOyanederV/calendar-app",
+      },
       {
         icon: OpenInNewIcon,
         href: "https://jorgeoyanederv.github.io/journal-app/",
