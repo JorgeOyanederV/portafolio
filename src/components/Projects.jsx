@@ -14,32 +14,28 @@ import Chip from "@mui/material/Chip";
 
 const projectsData = [
   {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing ",
+    title: "El Presente Portafolio",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+      "Portafolio minimalista creado para presentarme como desarrollador web. ",
     imageUrl:
       "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=697&q=80",
-    imageAlt: "Project 1 Image",
+    imageAlt: "Portafolio",
     tags: ["React.js", "Material-UI", "Gatsby.js"],
     links: [
       {
         icon: GitHubIcon,
         href: "https://www.github.com",
       },
-      {
-        icon: OpenInNewIcon,
-        href: "https://www.google.com",
-      },
     ],
   },
   {
-    title: "Lorem ipsum dolor sit amet",
+    title: "Panel de Administracion",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    imageAlt: "Project 2 Image",
+      "Un panel de administracion para empresas, realizado con el objetivo de practicar las bases de material ui con modo ligh y dark.",
+    imageAlt: "Panel de Administracion",
     imageUrl:
       "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
-    tags: ["GraphQL", "Apollo Client", "Prisma", "Material-UI"],
+    tags: ["React", "Nivo Charts", "Material-UI", "FullCalendar", "Formik"],
     links: [
       {
         icon: GitHubIcon,
@@ -47,22 +43,22 @@ const projectsData = [
       },
       {
         icon: OpenInNewIcon,
-        href: "https://www.google.com",
+        href: "https://jorgeoyanederv.github.io/admin-dashboard/#/dashboard",
       },
     ],
   },
   {
-    title: "Lorem ipsum dolor ",
+    title: "Proyecto Calendario MERN",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+      "Un simple proyecto pero completo, que lleva a cabo el levantamiento de un calendario con authenticacion y registro de base de datos.",
     imageAlt: "Project 3 Image",
     imageUrl:
       "https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    tags: ["React.js", "Node.js", "PostgreSQL", "Next.js"],
+    tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
     links: [
       {
         icon: OpenInNewIcon,
-        href: "https://www.google.com",
+        href: "https://jorgeoyanederv.github.io/journal-app/",
       },
     ],
   },
@@ -86,9 +82,21 @@ const TagsContainer = ({ tags, sxProp }) => {
 const Project = ({ title, description, imageUrl, tags, links }) => {
   return (
     <Grid item>
-      <Card sx={{ display: "flex" }}>
-        <Box>
-          <CardContent >
+      <Card
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: "column",
+            width: "100%",
+          }}
+        >
+          <CardContent sx={{ paddingBottom: 0 }}>
             <Typography variant="h5" paragraph>
               {title}
             </Typography>
@@ -97,10 +105,15 @@ const Project = ({ title, description, imageUrl, tags, links }) => {
             </Typography>
             <TagsContainer
               tags={tags}
-              sxProp={{ display: { xs: "none", md: "block" } }}
+              sxProp={{
+                display: { xs: "block", md: "none" },
+                paddingBottom: 0,
+              }}
             />
           </CardContent>
-          <CardActions>
+          <CardActions
+            sx={{ display: "flex", justifyContent: "space-between" }}
+          >
             <Box sx={{ mr: 5 }}>
               {links.map((linkItem) => (
                 <IconButton href={linkItem.href} key={linkItem.href}>
@@ -110,14 +123,18 @@ const Project = ({ title, description, imageUrl, tags, links }) => {
             </Box>
             <TagsContainer
               tags={tags}
-              sxProp={{ display: { xs: "block", md: "none" } }}
+              sxProp={{ display: { xs: "none", md: "block" } }}
             />
           </CardActions>
         </Box>
         <CardMedia
           component="img"
           image={imageUrl}
-          sx={{ display: { xs: "none", md: "block" }, width: 180 }}
+          sx={{
+            display: { xs: "none", md: "block" },
+            width: { xs: "0", md: "20%" },
+            paddingTop: 0,
+          }}
           alt=""
         />
       </Card>
@@ -133,7 +150,7 @@ const Projects = () => {
       sx={{ paddingTop: "10rem", paddingBottom: "2rem" }}
     >
       <Box mb={2}>
-        <Typography variant="h4">Projects</Typography>
+        <Typography variant="h4">Proyectos</Typography>
       </Box>
       <Grid container direction="column" spacing={4}>
         {projectsData.map((data) => (

@@ -31,13 +31,13 @@ const Header = () => {
               color: "white",
               backgroundColor: "black",
               borderRadius: 0,
-              height: 30,
+              width: 50,
               border: "2px solid gray",
               borderLeft: "12px solid transparent",
               borderRight: "12px solid transparent",
             }}
           >
-            P
+            JO
           </Avatar>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navigationLinks.map((item) => (
