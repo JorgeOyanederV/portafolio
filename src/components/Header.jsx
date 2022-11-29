@@ -16,7 +16,7 @@ import Box from "@mui/material/Box";
 const navigationLinks = [
   { name: "Sobre Mi", href: "#about" },
   { name: "Proyectos", href: "#projects" },
-  { name: "CV", href: "/resume.pdf" },
+  { name: "CV", href: "./resume.pdf" },
 ];
 
 const Header = () => {
