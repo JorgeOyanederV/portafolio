@@ -17,6 +17,7 @@ const navigationLinks = [
   { name: "Sobre Mi", href: "#about" },
   { name: "Proyectos", href: "#projects" },
   { name: "CV", href: "./resume.pdf" },
+  { name: "Tecnologias", href: "#technologies" },
 ];
 
 const Header = () => {
@@ -42,7 +43,7 @@ const Header = () => {
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navigationLinks.map((item) => (
               <Link
-                mr={20}
+                mr={10}
                 color="textPrimary"
                 variant="button"
                 underline="none"

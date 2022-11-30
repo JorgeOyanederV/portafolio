@@ -146,7 +146,7 @@ const Projects = () => {
     <Container
       maxWidth="md"
       id="projects"
-      sx={{ paddingTop: "10rem", paddingBottom: "2rem" }}
+      sx={{ paddingTop: "10rem", paddingBottom: "5rem" }}
     >
       <Box mb={2}>
         <Typography variant="h4">Proyectos</Typography>
