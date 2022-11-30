@@ -51,7 +51,7 @@ const HeroSection = () => {
                 Hola, mi nombre es Jorge Oyaneder, soy desarrollador web.
               </Typography>
               <Typography variant="h5">
-                Desarrollo paginas web, aplicaciones web y interfaces de
+                Desarrollo paginas web, aplicaciones web e interfaces de
                 usuario.
               </Typography>
               <Box my={2}>
