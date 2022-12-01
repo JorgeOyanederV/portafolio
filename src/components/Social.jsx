@@ -1,6 +1,5 @@
 import React from "react";
 import GithubIcon from "@mui/icons-material/Github";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
